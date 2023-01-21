@@ -44,7 +44,7 @@
                 message: "Your session is about to expire.",
                 logoutButton: "Logout",
                 keepAliveButton: "Stay Connected",
-                keepAliveUrl: "auth-signin.html",
+                keepAliveUrl: "/auth.html",
                 ajaxType: "POST",
                 ajaxData: "",
                 redirUrl: "/timed-out",

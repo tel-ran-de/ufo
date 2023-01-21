@@ -416,11 +416,11 @@
                                             <h6 class="mb-4">Daily Sales</h6>
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-9">
-                                                    <h3 class="f-w-300 d-flex align-items-center m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>$249.95</h3>
+                                                    <h3 class="f-w-300 d-flex align-items-center m-b-0"><i class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>$</h3>
                                                 </div>
 
                                                 <div class="col-3 text-right">
-                                                    <p class="m-b-0">67%</p>
+                                                    <p class="m-b-0">7%</p>
                                                 </div>
                                             </div>
                                             <div class="progress m-t-30" style="height: 7px;">
@@ -870,6 +870,43 @@
 
     <!-- dashboard-custom js -->
     <script src="assets/js/pages/dashboard-custom.js"></script>
+
+
+    <!-- session-idle Timeout js -->
+    <script src="assets/plugins/session-idle-timeout/js/session_timeout.min.js"></script>
+    <script src="assets/js/pages/session-idle-Timeout-custom.js"></script>
+
+    <!-- notification Js -->
+    <script src="assets/plugins/notification/js/bootstrap-growl.min.js"></script>
+
+    <script>
+           $(window).on('load', function() {
+                function notify(message, type) {
+                  $.growl({
+                      message: message
+                  }, {
+                      type: type,
+                      allow_dismiss: false,
+                      label: 'Cancel',
+                      className: 'btn-xs btn-inverse',
+                      placement: {
+                          from: 'top',
+                          align: 'right'
+                      },
+                      delay: 2500,
+                      animate: {
+                          enter: 'animated fadeInRight',
+                          exit: 'animated fadeOutRight'
+                      },
+                      offset: {
+                          x: 30,
+                          y: 30
+                      }
+                  });
+            };
+        notify('Welcome', 'inverse');
+        });
+   </script>
 
 </body>
 

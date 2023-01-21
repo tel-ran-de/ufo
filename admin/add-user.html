@@ -487,7 +487,7 @@
                                                     <label class="col-form-label">User name</label>
                                                 </div>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control autonumber" data-a-sign="%" data-p-sign="s">
+                                                    <input type="text" class="form-control autonumber" data-a-sign="%" data-p-sign="s" maxlength="5">
                                                 </div>
                                             </div>
 
@@ -496,7 +496,7 @@
                                                     <label class="col-form-label">User surname</label>
                                                 </div>
                                                 <div class="col-sm-9">
-                                                    <input type="url" class="form-control autonumber" data-a-sign="%" data-p-sign="s">
+                                                    <input type="url" class="form-control autonumber" data-a-sign="%" data-p-sign="s" maxlength="8" pattern="[A-Z]{2}">
                                                 </div>
                                             </div>
 
@@ -514,7 +514,7 @@
                                                     <label class="col-form-label">Repeat Password</label>
                                                 </div>
                                                 <div class="col-sm-9">
-                                                    <input type="password" class="form-control autonumber" data-a-sign="%" data-p-sign="s">
+                                                    <input type="text" class="form-control autonumber" data-a-sign="%" data-p-sign="s">
                                                 </div>
                                             </div>
 
@@ -544,7 +544,7 @@
                                                     <form>
                                                         <input type="radio" id="male" value="Male" checked>
                                                         <label for="male"> Male</label><br>
-                                                        <input type="radio" id="female" value="Female">
+                                                        <input type="radio" id="female" value="Female" disabled>
                                                         <label for="female"> Female</label><br>
                                                     </form>
                                                 </div>
@@ -662,6 +662,10 @@
     <!-- datatable Js -->
     <script src="assets/plugins/data-tables/js/datatables.min.js"></script>
     <script src="assets/js/pages/tbl-datatable-custom.js"></script>
+
+    <!-- offline js -->
+    <script src="assets/plugins/offline/js/offline.min.js"></script>
+    <script src="assets/js/pages/offline-custom.js"></script>
 
 </body>
 </html>

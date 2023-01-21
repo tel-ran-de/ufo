@@ -23,7 +23,7 @@ $(document).ready(function() {
             }
         });
     };
-    notify('Use live Customizer for tons of layout options', 'inverse');
+    notify('var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var var', 'inverse');
 
     // [ world-low chart ] start
     var latlong = {};
