@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ufo-service
-  namespace: chatty
+  namespace: ufo
   labels:
     app: ufo
 spec:
