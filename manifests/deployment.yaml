@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ufo-deployment
+  namespace: ufo
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: ufo
+  template:
+    metadata:
+      labels:
+        app: ufo
+    spec:
+      containers:
+        - name: ufo-service
+          image: ghcr.io/tel-ran-de/ufo:latest
+          ports:
+            - containerPort: 8888
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "200m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: ghcr-secret

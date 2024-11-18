@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ufo-service
+  namespace: chatty
+  labels:
+    app: ufo
+spec:
+  selector:
+    app: ufo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8888
+  type: ClusterIP

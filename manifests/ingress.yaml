@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ufo-ingress
+  namespace: chatty
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - api.chatty.tel-ran.de
+      secretName: ufo-tls
+  rules:
+    - host: api.chatty.tel-ran.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ufo-service
+                port:
+                  number: 8888
