@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: ufo-service
-          image: ghcr.io/tel-ran-de/ufo:6debf7df0349d6f8e3200d520440a436f069b324
+          image: ghcr.io/tel-ran-de/ufo:64fe7afc67cd38ce0634f14555af8156706024eb
           ports:
             - containerPort: 8888
           imagePullPolicy: Always
