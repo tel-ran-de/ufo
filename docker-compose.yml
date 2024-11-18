@@ -1,7 +1,8 @@
 version: "3"
 services:
   ufo:
-    image: trafex/php-nginx
+    build:
+      context: .
     ports:
       - "8888:8888"
     networks:
